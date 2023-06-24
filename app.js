@@ -7,6 +7,9 @@ connectDb();
 const app = express();
 app.use(express.json());
 
+const cors = require("cors");
+app.use(cors());
+
 app.use("/work", require("./routes/work.routes"));
 app.use("/what", require("./routes/what.routes"));
 app.use("/differential", require("./routes/differential.routes.js"));
